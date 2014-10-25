@@ -21,4 +21,5 @@ lib.listener = function(request, response){
 }
 
 lib.login();
-http.createServer(lib.listener).listen(8080);
+console.log("Listening on 8086");
+http.createServer(lib.listener).listen(8086);
