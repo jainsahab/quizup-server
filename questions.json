@@ -1,0 +1,22 @@
+[{
+	"question" : "is this my question?",
+	"options" : [ null, "no", "yes", "i am not sure", "bilkul nahi" ],
+	"answer" : 2
+
+},
+{
+	"question" : "does dog barks ?",
+	"options" : [ null, "no", "yes", "i am not sure", "definitely" ],
+	"answer" : 2
+},
+{
+	"question" : "which is a leap yaer",
+	"options" : [ null,"1966","1964","1900","1860"],
+	"answer" : 1
+
+},
+{
+    "question" : "who won cricket world cup 2014",
+    "options" : ["South Afrika","England","India","Sri Lanka"],
+    "answer" : 3
+}]
