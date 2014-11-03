@@ -17,7 +17,7 @@ var setUp = function() {
 	request = { url:request.test_url };
 	response = {};
 	response.end = function (message) {
-		assert.equal(response.test_message,message)		
+		assert.deepEqual(response.test_message,JSON.parse(message));
 	};
 	response.writeHead = function (statuscode,header) {
 		assert.equal(response.test_statuscode,statuscode);
@@ -32,8 +32,8 @@ var tearDown = function() {
 test.login_with_existing_login_email_and_password_credentials_says_login_successful = function (argument) {
 	setUp();
 	response.test_statuscode = 200;
-	response.test_header = {'Content-Type' : 'text/html'};
-	response.test_message = '<b>Login Successful with username: USERNAME </b>'
+	response.test_header = {'Content-Type' : 'text/json'};
+	response.test_message = {token:'lLwXjNDm5algYXbUEEWekyVr30cgH9nQVW3yiDAw',gameUrl:'https://quizup.firebaseio.com/doNotChange/game/player1',username: "USERNAME"}
 	request.url = '/login?email=EMAIL&password=PASSWORD';
 	request.test_url = '/login?email=EMAIL&password=PASSWORD';
 	routes['/login'](request,response);
@@ -41,9 +41,9 @@ test.login_with_existing_login_email_and_password_credentials_says_login_success
 }
 test.login_with_wrong_login_email_says_login_failure = function (argument) {
 	setUp();
-	response.test_message = '<b>Login Failed</b>'
+	response.test_message = {"status":"Content not found."};
 	response.test_statuscode = 404;
-	response.test_header = {'Content-Type' : 'text/html'};
+	response.test_header = {'Content-Type' : 'text/json'};
 	request.url = '/login?email=ANTHER_EMAIL&password=PASSWORD';
 	request.test_url = '/login?email=EMAIL&password=PASSWORD';
 	routes['/login'](request,response);
@@ -52,9 +52,9 @@ test.login_with_wrong_login_email_says_login_failure = function (argument) {
 
 test.login_with_wrong_login_password_says_login_failure = function (argument) {
 	setUp();
-	response.test_message = '<b>Login Failed</b>'
+	response.test_message = {"status":"Content not found."}
 	response.test_statuscode = 404;
-	response.test_header = {'Content-Type' : 'text/html'};
+	response.test_header = {'Content-Type' : 'text/json'};
 	request.url = '/login?email=EMAIL&password=ANOTHER_PASSWORD';
 	request.test_url = '/login?email=EMAIL&password=PASSWORD';
 	routes['/login'](request,response);

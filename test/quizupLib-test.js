@@ -1,4 +1,4 @@
-var lib = require('./quizupLib.js').lib;
+var lib = require('../lib/quizupLib.js').lib;
 var assert = require('assert');
 var test = {};
 exports.test = test;
