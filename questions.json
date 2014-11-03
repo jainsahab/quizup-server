@@ -1,52 +1,52 @@
 [{
 	"question" : "is this my question?",
 	"options" : [ "no", "yes", "i am not sure", "bilkul nahi" ],
-	"answer" : 2
+	"answer" : "no"
+
+},
+{
+	"question" : "is this my question?",
+	"options" : [ "no", "yes", "i am not sure", "bilkul nahi" ],
+	"answer" : "no"
+
+},{
+	"question" : "is this my question?",
+	"options" : [ "no", "yes", "i am not sure", "bilkul nahi" ],
+	"answer" : "no"
+
+},{
+	"question" : "is this my question?",
+	"options" : [ "no", "yes", "i am not sure", "bilkul nahi" ],
+	"answer" : "no"
 
 },
 {
 	"question" : "does dog barks ?",
 	"options" : [ "no", "yes", "i am not sure", "definitely" ],
-	"answer" : 2
+	"answer" : "yes"
 },
 {
 	"question" : "does dog barks ?",
 	"options" : [ "no", "yes", "i am not sure", "definitely" ],
-	"answer" : 2
+	"answer" : "yes"
 },
 {
 	"question" : "does dog barks ?",
 	"options" : [ "no", "yes", "i am not sure", "definitely" ],
-	"answer" : 2
+	"answer" : "yes"
 },
 {
 	"question" : "does dog barks ?",
 	"options" : [ "no", "yes", "i am not sure", "definitely" ],
-	"answer" : 2
-},
-{
-	"question" : "does dog barks ?",
-	"options" : [ "no", "yes", "i am not sure", "definitely" ],
-	"answer" : 2
-},
-{
-	"question" : "why does dog barks ?",
-	"options" : [ "no", "yes", "i am not sure", "definitely" ],
-	"answer" : 2
-},
-{
-	"question" : "does dog barks ?",
-	"options" : [ "no", "yes", "i am not sure", "definitely" ],
-	"answer" : 2
+	"answer" : "definitely"
 },
 {
 	"question" : "which is a leap yaer",
 	"options" : ["1966","1964","1900","1860"],
-	"answer" : 1
-
+	"answer" : "1966"
 },
 {
     "question" : "who won cricket world cup 2014",
-    "options" : ["South Afrika","England","India","Sri Lanka"],
-    "answer" : 3
+    "options" : ["South Africa","England","India","Sri Lanka"],
+    "answer" : "India"
 }]

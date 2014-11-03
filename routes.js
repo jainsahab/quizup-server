@@ -25,12 +25,15 @@ routes['/login'] = function (request, response) {
 		playerAssigned.player2 = false;
 		game = lib.createANewGame();
 		playerUrl = lib.assignPlayerTo(game,"player1",crypto.decrypt(user.username));
-		lib.putToFirebase("https://quizup.firebaseio.com/doNotChange/game/player1","lLwXjNDm5algYXbUEEWekyVr30cgH9nQVW3yiDAw",game["player1"]);
+		lib.putToFirebase(playerUrl,"lLwXjNDm5algYXbUEEWekyVr30cgH9nQVW3yiDAw",game["player1"]);
 	}else {
 		playerAssigned.player2 = true;
 		playerUrl = lib.assignPlayerTo(game,"player2",crypto.decrypt(user.username));
-		lib.putToFirebase("https://quizup.firebaseio.com/doNotChange/game/player2","lLwXjNDm5algYXbUEEWekyVr30cgH9nQVW3yiDAw",game["player2"]);
+		lib.putToFirebase(playerUrl,"lLwXjNDm5algYXbUEEWekyVr30cgH9nQVW3yiDAw",game["player2"]);
 		lib.putToFirebase("https://quizup.firebaseio.com/doNotChange/game/questions","lLwXjNDm5algYXbUEEWekyVr30cgH9nQVW3yiDAw",game["questions"]);
+		response.writeHead(200, {'Content-Type': 'text/json'});
+		response.end(JSON.stringify(lib.generateUserDetails(playerUrl,user.username)));
+		lib.putResultAfterCompletion("https://quizup.firebaseio.com/doNotChange/game","lLwXjNDm5algYXbUEEWekyVr30cgH9nQVW3yiDAw");
 	}
 	//Sending game details in response such as firebase token,gameUrl,playername
 	response.writeHead(200, {'Content-Type': 'text/json'});
