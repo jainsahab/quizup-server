@@ -33,7 +33,7 @@ test.login_with_existing_login_email_and_password_credentials_says_login_success
 	setUp();
 	response.test_statuscode = 200;
 	response.test_header = {'Content-Type' : 'text/json'};
-	response.test_message = {token:'lLwXjNDm5algYXbUEEWekyVr30cgH9nQVW3yiDAw',gameUrl:'https://quizup.firebaseio.com/doNotChange/game/player1',username: "USERNAME"}
+	response.test_message = {token:'lLwXjNDm5algYXbUEEWekyVr30cgH9nQVW3yiDAw',gameUrl:'https://quizup.firebaseio.com/doNotChange/game',player:"player1",username: "USERNAME"}
 	request.url = '/login?email=EMAIL&password=PASSWORD';
 	request.test_url = '/login?email=EMAIL&password=PASSWORD';
 	routes['/login'](request,response);

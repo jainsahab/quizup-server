@@ -5,6 +5,7 @@ var lib = require('./lib/quizupLib.js').lib;
 var routes = {};
 var playerAssigned = {player1:false,player2:false};
 var game = {};
+var gameUrl = 'https://quizup.firebaseio.com/doNotChange/game';
 var playerUrl;
 
  
@@ -30,14 +31,14 @@ routes['/login'] = function (request, response) {
 		playerAssigned.player2 = true;
 		playerUrl = lib.assignPlayerTo(game,"player2",crypto.decrypt(user.username));
 		lib.putToFirebase(playerUrl,"lLwXjNDm5algYXbUEEWekyVr30cgH9nQVW3yiDAw",game["player2"]);
-		lib.putToFirebase("https://quizup.firebaseio.com/doNotChange/game/questions","lLwXjNDm5algYXbUEEWekyVr30cgH9nQVW3yiDAw",game["questions"]);
+		lib.putToFirebase(gameUrl+"/questions","lLwXjNDm5algYXbUEEWekyVr30cgH9nQVW3yiDAw",game["questions"]);
 		response.writeHead(200, {'Content-Type': 'text/json'});
-		response.end(JSON.stringify(lib.generateUserDetails(playerUrl,user.username)));
-		lib.putResultAfterCompletion("https://quizup.firebaseio.com/doNotChange/game","lLwXjNDm5algYXbUEEWekyVr30cgH9nQVW3yiDAw");
+		response.end(JSON.stringify(lib.generateUserDetails(gameUrl,"player1",user.username)));
+		lib.putResultAfterCompletion(gameUrl,"lLwXjNDm5algYXbUEEWekyVr30cgH9nQVW3yiDAw");
 	}
 	//Sending game details in response such as firebase token,gameUrl,playername
 	response.writeHead(200, {'Content-Type': 'text/json'});
-	response.end(JSON.stringify(lib.generateUserDetails(playerUrl,user.username)));
+	response.end(JSON.stringify(lib.generateUserDetails(gameUrl,'player1',user.username)));
 }
 
 exports.routes = routes;
