@@ -1,52 +1,64 @@
 [{
-	"question" : "is this my question?",
-	"options" : [ "no", "yes", "i am not sure", "bilkul nahi" ],
-	"answer" : "no"
-
+	"question":"Q. What type of keys are ctrl and shift?",
+	"options" : [ "adjustment", "function", "modifier", "alphanumeric" ],
+	"answer" : "modifier"
 },
 {
-	"question" : "is this my question?",
-	"options" : [ "no", "yes", "i am not sure", "bilkul nahi" ],
-	"answer" : "no"
-
-},{
-	"question" : "is this my question?",
-	"options" : [ "no", "yes", "i am not sure", "bilkul nahi" ],
-	"answer" : "no"
-
-},{
-	"question" : "is this my question?",
-	"options" : [ "no", "yes", "i am not sure", "bilkul nahi" ],
-	"answer" : "no"
-
+	"question":"Q. In Word, replace option is a available on -",
+	"options" : [ "File Menu", "View Menu", "Edit Menu", "Format Menu" ],
+	"answer" : "Edit Menu"
 },
 {
-	"question" : "does dog barks ?",
-	"options" : [ "no", "yes", "i am not sure", "definitely" ],
-	"answer" : "yes"
+	"question":"The binary system is a number system to the base -",
+	"options" : [ "2", "4", "8", "10" ],
+	"answer" : "4"
 },
 {
-	"question" : "does dog barks ?",
-	"options" : [ "no", "yes", "i am not sure", "definitely" ],
-	"answer" : "yes"
+	"question":"Q. Which of the following is not an example of hardware?",
+	"options" : [ "Scanner", "Printer", "Monitor", "Interpreter" ],
+	"answer" : "Interpreter"
 },
 {
-	"question" : "does dog barks ?",
-	"options" : [ "no", "yes", "i am not sure", "definitely" ],
-	"answer" : "yes"
+	"question":"Q. In excel, this is a pre-recorded formula that provides a shortcut for complex calculations -",
+	"options" : [ "Value", "Data Series", "Function", "Field" ],
+	"answer" : "Function"
 },
-{
-	"question" : "does dog barks ?",
-	"options" : [ "no", "yes", "i am not sure", "definitely" ],
-	"answer" : "definitely"
+{ 
+  "question": "Q. This is not a function category in Excel -",
+  "answer": "Data Series",
+  "options": [ "Logical", "Data Series", "Financial", "Text" ] 
 },
-{
-	"question" : "which is a leap yaer",
-	"options" : ["1966","1964","1900","1860"],
-	"answer" : "1966"
+{ 
+  "question": "Q. This is not a function category in Excel -",
+  "answer": "Data Series",
+  "options": [ "Logical", "Data Series", "Financial", "Text" ] 
 },
-{
-    "question" : "who won cricket world cup 2014",
-    "options" : ["South Africa","England","India","Sri Lanka"],
-    "answer" : "India"
+{ "question": "Q. On a CD-RW you can",
+  "answer": "read, write and rewrite information",
+  "options":
+   [ "read and write information.",
+     "only read information.",
+     "only write information.",
+     "read, write and rewrite information" ] 
+},
+{ 
+  "question": "Q. To be able to 'boot', the computer must have a(n)",
+  "answer": "Operating system",
+  "options": [ "Compiler", "Loader", "Operating system", "Assembler" ] 
+},
+{ "question": "Q. The operating system that is self-contained in a device and resident in the ROM is -",
+  "answer": "Embedded Operating System",
+  "options":
+   [ "Batch Operating System",
+     "Real-time Operating System",
+     "Embedded Operating System",
+     "Multi-Processor Operating System" ] 
+},
+{ "question": "Q. To make a copy of the current document on the disk -",
+  "answer": "Use the 'save as' command",
+  "options":
+   [ "Use the 'save' command",
+     "This cannot be done",
+     "Use the 'duplicate' command",
+     "Use the 'save as' command" ] 
 }]

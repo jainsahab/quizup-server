@@ -5,7 +5,7 @@ var lib = require('./lib/quizupLib.js').lib;
 var routes = {};
 var playerAssigned = {player1:false,player2:false};
 var game = {};
-var gameUrl = 'https://quizup.firebaseio.com/doNotChange/game';
+var gameUrl = 'https://quizup.firebaseio.com/test/game';
 var playerUrl;
 
  
@@ -33,7 +33,7 @@ routes['/login'] = function (request, response) {
 		lib.putToFirebase(playerUrl,"lLwXjNDm5algYXbUEEWekyVr30cgH9nQVW3yiDAw",game["player2"]);
 		lib.putToFirebase(gameUrl+"/questions","lLwXjNDm5algYXbUEEWekyVr30cgH9nQVW3yiDAw",game["questions"]);
 		response.writeHead(200, {'Content-Type': 'text/json'});
-		response.end(JSON.stringify(lib.generateUserDetails(gameUrl,"player1",user.username)));
+		response.end(JSON.stringify(lib.generateUserDetails(gameUrl,"player2",user.username)));
 		lib.putResultAfterCompletion(gameUrl,"lLwXjNDm5algYXbUEEWekyVr30cgH9nQVW3yiDAw");
 	}
 	//Sending game details in response such as firebase token,gameUrl,playername
