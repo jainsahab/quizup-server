@@ -25,11 +25,13 @@ routes['/login'] = function (request, response) {
 		playerAssigned.player1 = true;
 		playerAssigned.player2 = false;
 		game = lib.createANewGame();
-		playerUrl = lib.assignPlayerTo(game,"player1",crypto.decrypt(user.username));
+		lib.assignPlayerTo(game,"player1",crypto.decrypt(user.username));
+		playerUrl = gameUrl+"/player1";
 		lib.putToFirebase(playerUrl,"lLwXjNDm5algYXbUEEWekyVr30cgH9nQVW3yiDAw",game["player1"]);
 	}else {
 		playerAssigned.player2 = true;
-		playerUrl = lib.assignPlayerTo(game,"player2",crypto.decrypt(user.username));
+		lib.assignPlayerTo(game,"player2",crypto.decrypt(user.username));
+		playerUrl = gameUrl+'/player2';
 		lib.putToFirebase(playerUrl,"lLwXjNDm5algYXbUEEWekyVr30cgH9nQVW3yiDAw",game["player2"]);
 		lib.putToFirebase(gameUrl+"/questions","lLwXjNDm5algYXbUEEWekyVr30cgH9nQVW3yiDAw",game["questions"]);
 		response.writeHead(200, {'Content-Type': 'text/json'});
