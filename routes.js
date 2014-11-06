@@ -36,7 +36,7 @@ routes['/login'] = function (request, response) {
 		lib.putToFirebase(gameUrl+"/questions","lLwXjNDm5algYXbUEEWekyVr30cgH9nQVW3yiDAw",game["questions"]);
 		response.writeHead(200, {'Content-Type': 'text/json'});
 		response.end(JSON.stringify(lib.generateUserDetails(gameUrl,"player2",user.username)));
-		lib.putResultAfterCompletion(gameUrl,"lLwXjNDm5algYXbUEEWekyVr30cgH9nQVW3yiDAw");
+		lib.putResultAfterCompletion(gameUrl,"lLwXjNDm5algYXbUEEWekyVr30cgH9nQVW3yiDAw",game);
 	}
 	//Sending game details in response such as firebase token,gameUrl,playername
 	response.writeHead(200, {'Content-Type': 'text/json'});
