@@ -1,56 +1,44 @@
-[{
-	"question":"Q.1 What type of keys are ctrl and shift?",
-	"options" : [ "adjustment", "function", "modifier", "alphanumeric" ],
-	"answer" : "modifier"
+[
+{ "question": "Q.1 Where is the Railway Staff College located?",
+  "answer": "Vadodara",
+  "options": [ "Pune", "Allahabad", "Vadodara", "Delhi" ] 
+},
+{ "question": "Q.2 'Dandia' is a popular dance of",
+  "answer": "Gujarat",
+  "options": [ "Punjab", "Gujarat", "Tamil Nadu", "Maharashtra" ] 
 },
 {
-	"question":"Q.2 In Word, replace option is a available on -",
-	"options" : [ "File Menu", "View Menu", "Edit Menu", "Format Menu" ],
-	"answer" : "Edit Menu"
+  "question":"Q.3 The binary system is a number system to the base -",
+  "options" : [ "2", "4", "8", "10" ],
+  "answer" : "2"
 },
 {
-	"question":"Q.3 The binary system is a number system to the base -",
-	"options" : [ "2", "4", "8", "10" ],
-	"answer" : "4"
+  "question":"Q.4 Which of the following is not an example of hardware?",
+  "options" : [ "Scanner", "Printer", "Monitor", "Interpreter" ],
+  "answer" : "Interpreter"
 },
-{
-	"question":"Q.4 Which of the following is not an example of hardware?",
-	"options" : [ "Scanner", "Printer", "Monitor", "Interpreter" ],
-	"answer" : "Interpreter"
+{ "question": "Q.5 The book of Parsis is",
+  "answer": "Zend Avesta",
+  "options": [ "Torah", "Bible", "Zend Avesta", "Gita" ] 
 },
-{
-	"question":"Q.5 In excel, this is a pre-recorded formula that provides a shortcut for complex calculations -",
-	"options" : [ "Value", "Data Series", "Function", "Field" ],
-	"answer" : "Function"
-},
-{ 
-  "question": "Q.6 This is not a function category in Excel -",
-  "answer": "Data Series",
-  "options": [ "Logical", "Data Series", "Financial", "Text" ] 
+{ "question": "Q.6 Kathak is a classical dance of",
+  "answer": "North India",
+  "options": [ "North India", "Tamilnadu", "Manipur", "Kerala" ] 
 },
 { 
   "question": "Q.7 The Centre for Cellular and Molecular Biology is situated at",
   "answer": "Hyderabad",
   "options": [ "Patna", "Jaipur", "Hyderabad", "New Delhi" ] 
 },
-{ "question": "Q.8 On a CD-RW you can",
-  "answer": "read, write and rewrite information",
-  "options":
-   [ "read and write information.",
-     "only read information.",
-     "only write information.",
-     "read, write and rewrite information" ] 
+{ "question": "Q.8 National Police Academy is located at",
+  "answer": "Hyderabad",
+  "options": [ "Bangalore", "Hyderabad", "Abu Road", "Dehradun" ] 
 },
-{ 
-  "question": "Q.9 To be able to 'boot', the computer must have a(n)",
-  "answer": "Operating system",
-  "options": [ "Compiler", "Loader", "Operating system", "Assembler" ] 
+{ "question": "Q.9 Which is known as 'Garden City of India'",
+  "answer": "Bangalore",
+  "options": [ "Trivandram", "Imphal", "Simla", "Bangalore" ] 
 },
-{ "question": "Q.10 To make a copy of the current document on the disk -",
-  "answer": "Use the 'save as' command",
-  "options":
-   [ "Use the 'save' command",
-     "This cannot be done",
-     "Use the 'duplicate' command",
-     "Use the 'save as' command" ] 
+{ "question": "Q.10 Badrinath is situated on the bank of river",
+  "answer": "Alaknanda",
+  "options": [ "Ganga", "Yamuna", "Alaknanda", "Saraswathi" ] 
 }]

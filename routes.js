@@ -33,10 +33,12 @@ routes['/login'] = function (request, response) {
 		lib.assignPlayerTo(game,"player2",crypto.decrypt(user.username));
 		playerUrl = gameUrl+'/player2';
 		lib.putToFirebase(playerUrl,"lLwXjNDm5algYXbUEEWekyVr30cgH9nQVW3yiDAw",game["player2"]);
-		lib.putToFirebase(gameUrl+"/questions","lLwXjNDm5algYXbUEEWekyVr30cgH9nQVW3yiDAw",game["questions"]);
 		response.writeHead(200, {'Content-Type': 'text/json'});
 		response.end(JSON.stringify(lib.generateUserDetails(gameUrl,"player2",user.username)));
 		lib.putResultAfterCompletion(gameUrl,"lLwXjNDm5algYXbUEEWekyVr30cgH9nQVW3yiDAw",game);
+		setTimeout(function(){
+			lib.putToFirebase(gameUrl+"/questions","lLwXjNDm5algYXbUEEWekyVr30cgH9nQVW3yiDAw",game["questions"]);
+		}, 5000);
 	}
 	//Sending game details in response such as firebase token,gameUrl,playername
 	response.writeHead(200, {'Content-Type': 'text/json'});
